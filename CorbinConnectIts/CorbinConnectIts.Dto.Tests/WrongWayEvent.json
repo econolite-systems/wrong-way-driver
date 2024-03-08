@@ -1,0 +1,19 @@
+// SPDX-License-Identifier: MIT
+// Copyright: 2023 Econolite Systems, Inc.
+{
+    "timestamp": "2023-01-09T14:51:55.921-05:00",
+    "customer": "Econolite",
+    "region": "Testing",
+    "serial": "123456",
+    "sensorParams": {
+        "REMOTE_ADDR": "127.0.0.1",
+        "lat": "1234",
+        "lon": "5678",
+        "vehicle": "wrongway"
+    },
+    "operationType": "Wrongway Alert",
+    "reason": "camera only wrongway",
+    "customContent": "kafka activate",
+    "attachments": [],
+    "radarData": null
+}

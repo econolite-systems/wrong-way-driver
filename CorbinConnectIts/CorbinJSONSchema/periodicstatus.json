@@ -1,0 +1,251 @@
+// SPDX-License-Identifier: MIT
+// Copyright: 2023 Econolite Systems, Inc.
+{
+  "type" : "object",
+  "id" : "urn:jsonschema:com:mhcorbin:V2I:report:Summary",
+  "properties" : {
+    "zones" : {
+      "type" : "array",
+      "items" : {
+        "type" : "object",
+        "id" : "urn:jsonschema:com:mhcorbin:V2I:report:Zone",
+        "properties" : {
+          "name" : {
+            "type" : "string"
+          },
+          "area" : {
+            "type" : "object",
+            "id" : "urn:jsonschema:org:geojson:Polygon",
+            "properties" : {
+              "crs" : {
+                "type" : "object",
+                "id" : "urn:jsonschema:org:geojson:Crs",
+                "properties" : {
+                  "type" : {
+                    "type" : "string",
+                    "enum" : [ "name", "link" ]
+                  },
+                  "properties" : {
+                    "type" : "object",
+                    "additionalProperties" : {
+                      "type" : "any"
+                    }
+                  }
+                }
+              },
+              "bbox" : {
+                "type" : "array",
+                "items" : {
+                  "type" : "number"
+                }
+              },
+              "coordinates" : {
+                "type" : "array",
+                "items" : {
+                  "type" : "array",
+                  "items" : {
+                    "type" : "any"
+                  }
+                }
+              }
+            }
+          },
+          "absmData" : {
+            "type" : "object",
+            "id" : "urn:jsonschema:com:mhcorbin:V2I:report:Aggregation",
+            "properties" : {
+              "totalCount" : {
+                "type" : "integer"
+              },
+              "latestID" : {
+                "type" : "integer"
+              },
+              "speedStatistics" : {
+                "$ref": "#/$defs/statistics" 
+              },
+              "headingStatistics" : {
+                "$ref": "#/$defs/statistics"
+              },
+              "lengthStatistics" : {
+                "$ref": "#/$defs/statistics"
+              },
+              "uniqueCount" : {
+                "type" : "integer"
+              },
+              "percentageBrakesApplied" : {
+                "type" : "number"
+              },
+              "percentageABSEngaged" : {
+                "type" : "number"
+              }
+            }
+          }
+        }
+      }
+    },
+    "timestamp" : {
+      "type" : "string"
+    },
+    "customer" : {
+      "type" : "string"
+    },
+    "region" : {
+      "type" : "string"
+    },
+    "serialNumber" : {
+      "type" : "string"
+    },
+    "statusIntervalSec" : {
+      "type" : "integer"
+    },
+    "subtype" : {
+      "type" : "string"
+    },
+    "location" : {
+      "type" : "string"
+    },
+    "latitude" : {
+      "type" : "string"
+    },
+    "longitude" : {
+      "type" : "string"
+    },
+    "elevation" : {
+      "type" : "string"
+    },
+    "systemStatus" : {
+      "type" : "string"
+    },
+    "sensorPollingIntervalSec" : {
+      "type" : "integer"
+    },
+    "sensorPollingStatus" : {
+      "type" : "boolean"
+    },
+    "sensors" : {
+      "type" : "array",
+      "items" : {
+        "type" : "object",
+        "id" : "urn:jsonschema:com:mhcorbin:weathersensor:IRWISSensor",
+        "properties" : {
+          "sensorDesc" : {
+            "type" : "string"
+          },
+          "sensorID" : {
+            "type" : "integer"
+          },
+          "sensorType" : {
+            "type" : "object",
+            "id" : "urn:jsonschema:com:mhcorbin:weathersensor:IRWISSensorType",
+            "properties" : {
+              "typeID" : {
+                "type" : "integer"
+              },
+              "channels" : {
+                "type" : "array",
+                "items" : {
+                  "type" : "integer"
+                }
+              },
+              "measureID" : {
+                "type" : "integer"
+              },
+              "typeDescription" : {
+                "type" : "string"
+              }
+            }
+          },
+          "deviceID" : {
+            "type" : "integer"
+          },
+          "pollingTimeoutSEC" : {
+            "type" : "integer"
+          }
+        }
+      }
+    },
+    "digitaloutput1" : {
+      "type" : "string"
+    },
+    "digitaloutput2" : {
+      "type" : "string"
+    },
+    "version" : {
+      "type" : "string"
+    },
+    "loggingLevel" : {
+      "type" : "string"
+    },
+    "analogInput1" : {
+      "type" : "number"
+    },
+    "analogInput2" : {
+      "type" : "number"
+    },
+    "scriptStatus" : {
+      "type" : "array",
+      "items" : {
+        "type" : "object",
+        "id" : "urn:jsonschema:com:mhcorbin:scripting:ScriptEntry",
+        "properties" : {
+          "name" : {
+            "type" : "string"
+          },
+          "fileSpec" : {
+            "type" : "string"
+          },
+          "disabled" : {
+            "type" : "boolean"
+          },
+          "alive" : {
+            "type" : "boolean"
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "statistics": {
+      "type" : "object",
+      "id" : "urn:jsonschema:com:mhcorbin:V2I:report:Statistics",
+      "properties" : {
+        "count" : {
+          "type" : "integer"
+        },
+        "maxValue" : {
+          "type" : "number"
+        },
+        "minValue" : {
+          "type" : "number"
+        },
+        "buckets" : {
+          "type" : "array",
+          "items" : {
+            "type" : "object",
+            "id" : "urn:jsonschema:com:mhcorbin:V2I:report:Bucket",
+            "properties" : {
+              "name" : {
+                "type" : "string"
+              },
+              "rangeLow" : {
+                "type" : "number"
+              },
+              "rangeHigh" : {
+                "type" : "number"
+              },
+              "count" : {
+                "type" : "integer"
+              }
+            }
+          }
+        },
+        "unknownCount" : {
+          "type" : "integer"
+        },
+        "averageValue" : {
+          "type" : "number"
+        }
+      }
+    }
+  }
+}

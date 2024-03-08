@@ -1,0 +1,43 @@
+// SPDX-License-Identifier: MIT
+// Copyright: 2023 Econolite Systems, Inc.
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/Simulator.WrongWayDriver.Logging.Producer/Simulator.WrongWayDriver.Logging.Producer.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "publish",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "publish",
+                "${workspaceFolder}/Simulator.WrongWayDriver.Logging.Producer/Simulator.WrongWayDriver.Logging.Producer.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "watch",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "watch",
+                "run",
+                "--project",
+                "${workspaceFolder}/Simulator.WrongWayDriver.Logging.Producer/Simulator.WrongWayDriver.Logging.Producer.csproj"
+            ],
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}

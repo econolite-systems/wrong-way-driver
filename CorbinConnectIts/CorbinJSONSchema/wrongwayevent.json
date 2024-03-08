@@ -1,0 +1,62 @@
+// SPDX-License-Identifier: MIT
+// Copyright: 2023 Econolite Systems, Inc.
+{
+  "type" : "object",
+  "id" : "urn:jsonschema:com:mhcorbin:jsonobjects:WrongwayEvent",
+  "properties" : {
+    "timestamp" : {
+      "type" : "string"
+    },
+    "customer" : {
+      "type" : "string"
+    },
+    "region" : {
+      "type" : "string"
+    },
+    "serial" : {
+      "type" : "string"
+    },
+    "sensorParams" : {
+      "type" : "object",
+      "additionalProperties" : {
+        "type" : "string"
+      }
+    },
+    "operationType" : {
+      "type" : "string"
+    },
+    "reason" : {
+      "type" : "string"
+    },
+    "customContent" : {
+      "type" : "string"
+    },
+    "attachments" : {
+      "type" : "array",
+      "items" : {
+        "type" : "string"
+      }
+    },
+    "radarData" : {
+      "type" : "object",
+      "id" : "urn:jsonschema:com:mhcorbin:weathersensor:SensorData",
+      "properties" : {
+        "m_iSensorID" : {
+          "type" : "integer"
+        },
+        "m_iChannelNumber" : {
+          "type" : "integer"
+        },
+        "m_fValue" : {
+          "type" : "number"
+        },
+        "m_iEventID" : {
+          "type" : "integer"
+        },
+        "timestamp" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

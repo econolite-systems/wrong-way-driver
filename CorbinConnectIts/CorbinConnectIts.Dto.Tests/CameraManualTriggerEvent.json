@@ -1,0 +1,9 @@
+// SPDX-License-Identifier: MIT
+// Copyright: 2023 Econolite Systems, Inc.
+{
+    "params": {
+        "vehicle": "wrongway",
+        "lat": "123",
+        "lon": "456"
+    }
+}

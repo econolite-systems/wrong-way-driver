@@ -1,0 +1,4 @@
+apiVersion: v1
+description: ODE Corbin Connect-ITS service
+name: "ode-corbin-connectits-service"
+version: 0.1.0

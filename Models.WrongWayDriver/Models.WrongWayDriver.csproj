@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+<!-- SPDX-License-Identifier: MIT -->
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>Econolite.Ode.Models.WrongWayDriver</RootNamespace>
+  <Copyright>2023-&lt;&lt;CURRENT_YEAR&gt;&gt; Econolite Systems, Inc.</Copyright>
+</PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Models.WrongWayDriver.Generated\Models.WrongWayDriver.Generated.csproj" />
+  </ItemGroup>
+
+</Project>

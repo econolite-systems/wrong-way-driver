@@ -1,0 +1,11 @@
+// SPDX-License-Identifier: MIT
+// Copyright: 2023 Econolite Systems, Inc.
+{
+    "kvps": {
+        "key3": "value3",
+        "key2": "value2",
+        "key1": "value1"
+    },
+    "restartApp": false,
+    "saveToDisk": true
+}

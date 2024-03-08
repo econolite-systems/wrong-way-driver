@@ -1,0 +1,14 @@
+// SPDX-License-Identifier: MIT
+// Copyright: 2023 Econolite Systems, Inc.
+{
+  "type" : "object",
+  "id" : "urn:jsonschema:com:mhcorbin:mqtt:CameraParameters",
+  "properties" : {
+    "params" : {
+      "type" : "object",
+      "additionalProperties" : {
+        "type" : "string"
+      }
+    }
+  }
+}

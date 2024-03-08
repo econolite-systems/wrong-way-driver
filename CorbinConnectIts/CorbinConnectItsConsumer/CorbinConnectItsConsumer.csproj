@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+<!-- SPDX-License-Identifier: MIT -->
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>Econolite.Ode.CorbinConnectItsConsumer</RootNamespace>
+    <UserSecretsId>d2b1cd01-2214-465f-8053-9d2ad9c0a812</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  <Copyright>2023-&lt;&lt;CURRENT_YEAR&gt;&gt; Econolite Systems, Inc.</Copyright>
+</PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="appsettings.Development.json" />
+  </ItemGroup>
+
+    <ItemGroup>
+        <None Update="appsettings.json">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Content Include="appsettings.Development.json">
+            <DependentUpon>appsettings.json</DependentUpon>
+            <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="$(SolutionDir)\common\Extensions.AspNet\Extensions.AspNet.csproj" />
+        <ProjectReference Include="$(SolutionDir)\status\Status.WrongWayDriver.Messaging\Status.WrongWayDriver.Messaging.csproj" />
+        <ProjectReference Include="..\CorbinConnectIts.Dto\CorbinConnectIts.Dto.csproj" />
+    </ItemGroup>
+
+</Project>

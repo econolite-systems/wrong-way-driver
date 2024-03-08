@@ -1,0 +1,26 @@
+// SPDX-License-Identifier: MIT
+// Copyright: 2023 Econolite Systems, Inc.
+{
+    "zones": [],
+    "timestamp": "2023-01-09T14:01:37.804-05:00",
+    "customer": "Econolite",
+    "region": "Testing",
+    "serialNumber": "123456",
+    "statusIntervalSec": 30,
+    "subtype": "connectubuntu18",
+    "location": "bw_office",
+    "latitude": "123.4",
+    "longitude": "567.8",
+    "elevation": "9.0",
+    "systemStatus": "NORMAL",
+    "sensorPollingIntervalSec": 0,
+    "sensorPollingStatus": true,
+    "sensors": null,
+    "digitaloutput1": "UNKNOWN",
+    "digitaloutput2": "UNKNOWN",
+    "version": "1.1.65.20230104",
+    "loggingLevel": "DEBUG",
+    "scriptStatus": [],
+    "analogInput1": 0.0,
+    "analogInput2": 0.0
+}

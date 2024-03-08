@@ -1,0 +1,10 @@
+wrongWayDriver:
+  name: ode-corbin-connectits-service
+  imageRepository: cosysdev.azurecr.io/ode-corbin-connectits-service
+  service:
+    port: 80
+  probes:
+    enabled: false
+  kafka:
+    groupId: 'ode-corbin-connectits-service'
+  resources: {}
